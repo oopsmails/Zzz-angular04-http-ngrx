@@ -17,15 +17,12 @@
 .settings/
 *.sublime-workspace
 
-.editorconfig
-
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.vscode
 
 # misc
 /.sass-cache
@@ -35,7 +32,6 @@
 npm-debug.log
 testem.log
 /typings
-debug.log
 
 # e2e
 /e2e/*.js
