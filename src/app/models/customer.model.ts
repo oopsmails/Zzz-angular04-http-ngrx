@@ -1,9 +1,4 @@
 export class Customer {
-    // id?: string;
-    // email?: string;
-    // firstName?: string;
-    // lastName?: string;
-
     constructor(
         public id?: string,
         public email?: string,

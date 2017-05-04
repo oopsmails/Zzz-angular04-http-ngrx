@@ -8,8 +8,6 @@ export function customerReducer(state: Customer[] = initialCustomers, action: Ac
         case GET_CUSTOMERS:
             return { ...state, customers: action.payload };
         case ADD_CUSTOMERS:
-            console.log('----------------------customerReducer, action.payload = ' + action.payload);
-            // return { ...state, customers: action.payload };
             return Object.assign({}, state, action.payload);
         case RESET:
             return Object.assign({}, state, initialCustomers);
