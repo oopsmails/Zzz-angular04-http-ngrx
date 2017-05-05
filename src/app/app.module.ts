@@ -22,7 +22,7 @@ import { CustomerListComponent } from './components/customer-list/customer-list.
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({ customers: customerReducer })
+    StoreModule.provideStore({ customerAppStore: customerReducer })
   ],
   providers: [
     CustomerService

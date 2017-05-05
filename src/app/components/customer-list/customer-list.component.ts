@@ -1,10 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+// import { Subject } from 'rxjs/Subject';
 import { Store } from '@ngrx/store';
 import { GET_CUSTOMERS, RESET } from '../../ngstore/customer.actions';
 
 import { Customer } from '../../models/customer.model';
+import { CustomerAppStore } from '../../ngstore/customer.appstore';
 import { CustomerService } from '../../services/customer.service';
 
 @Component({
@@ -13,25 +15,24 @@ import { CustomerService } from '../../services/customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit, OnDestroy {
-
-  customersState: Observable<Customer[]>;
-  private customersStateSubscription: Subscription;
+  customerAppStoreState$: Observable<CustomerAppStore>;
+  private customersAppStoreStateSubscription: Subscription;
   customerList: Customer[];
+  selectedCustomer: Customer;
 
-  constructor(private customerService: CustomerService, private store: Store<Customer[]>) {
-    // has to initialize here, otherwise undefined
-    this.customersState = this.store.select('customers');
+  constructor(private customerService: CustomerService, private store: Store<CustomerAppStore>) {
+    this.customerAppStoreState$ = this.store.select('customerAppStore');
   }
 
   ngOnInit() {
-    this.customersStateSubscription = this.customersState.subscribe((state) => {
-      this.customersState = this.store.select('customers');
-      this.customerList = state;
+    this.customersAppStoreStateSubscription = this.customerAppStoreState$.subscribe((state) => {
+      this.customerList = state.customers;
+      this.selectedCustomer = state.selectedCustomer;
     });
     this.customerService.loadCustomers();
   }
 
   ngOnDestroy() {
-    this.customersStateSubscription.unsubscribe();
+    this.customersAppStoreStateSubscription.unsubscribe();
   }
 }

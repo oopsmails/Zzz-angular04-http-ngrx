@@ -1,17 +1,18 @@
-// src/app/core/pet-tag.reducer.ts
 import { Action } from '@ngrx/store';
-import { Customer, initialCustomers } from '../models/customer.model';
+import { CustomerAppStore, initialCustomerAppStore } from './customer.appstore';
 import { GET_CUSTOMERS, ADD_CUSTOMERS, RESET } from './customer.actions';
 
-export function customerReducer(state: Customer[] = initialCustomers, action: Action) {
+export function customerReducer(state: CustomerAppStore = initialCustomerAppStore, action: Action): CustomerAppStore {
     switch (action.type) {
         case GET_CUSTOMERS:
-            return { ...state, customers: action.payload };
+            return { ...state, customerAppStore: action.payload };
         case ADD_CUSTOMERS:
-            return Object.assign({}, state, action.payload);
+            const result: CustomerAppStore = Object.assign({}, state, action.payload);
+            return result;
         case RESET:
-            return Object.assign({}, state, initialCustomers);
+            return Object.assign({}, state, initialCustomerAppStore);
         default:
             return state;
     }
 }
+
