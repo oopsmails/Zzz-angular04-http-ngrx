@@ -8,8 +8,10 @@ declare var $: any;
   styleUrls: ['./bootstrap-css.component.css']
 })
 export class BootstrapCssComponent implements OnInit {
-
-  constructor() { }
+  fullImagePath: string;
+  constructor() {
+    this.fullImagePath = '/assets/images'
+  }
 
   ngOnInit() {
   }

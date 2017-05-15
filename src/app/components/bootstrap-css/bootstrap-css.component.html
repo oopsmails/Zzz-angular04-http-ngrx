@@ -2,7 +2,7 @@
   <div class="progress progress-striped active">
     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
       style="width:0%"></div>
-</div>
+  </div>
 </div>
 
 <br>
@@ -27,6 +27,54 @@
     <p class="list-group-item-text">Pagination</p>
     <p class="list-group-item-text">Breadcrumbs</p>
     <p class="list-group-item-text">Pager</p>
+  </a>
+
+  <a pageScroll href="#listgroup" class="list-group-item">
+    <h4 class="list-group-item-heading">List Group</h4>
+  </a>
+
+  <a pageScroll href="#panels" class="list-group-item">
+    <h4 class="list-group-item-heading">Panels</h4>
+  </a>
+
+  <a pageScroll href="#dropdowns" class="list-group-item">
+    <h4 class="list-group-item-heading">Dropdowns</h4>
+  </a>
+
+  <a pageScroll href="#collapsible" class="list-group-item">
+    <h4 class="list-group-item-heading">Collapsible</h4>
+  </a>
+
+  <a pageScroll href="#manus" class="list-group-item">
+    <h4 class="list-group-item-heading">Menus</h4>
+  </a>
+
+  <a pageScroll href="#forms" class="list-group-item">
+    <h4 class="list-group-item-heading">Forms</h4>
+  </a>
+
+  <a pageScroll href="#columnsizing" class="list-group-item">
+    <h4 class="list-group-item-heading">Column Sizing (Input Sizing)</h4>
+  </a>
+
+  <a pageScroll href="#mediaobject" class="list-group-item">
+    <h4 class="list-group-item-heading">Media Object</h4>
+  </a>
+
+  <a pageScroll href="#carousel" class="list-group-item">
+    <h4 class="list-group-item-heading">Carousel</h4>
+  </a>
+
+  <a pageScroll href="#smallModal" class="list-group-item">
+    <h4 class="list-group-item-heading">Modal Small (Large)</h4>
+  </a>
+
+  <a pageScroll href="#tooltip" class="list-group-item">
+    <h4 class="list-group-item-heading">Tooltip (Aways bottom?!)</h4>
+  </a>
+
+  <a pageScroll href="#last" class="list-group-item">
+    <h4 class="list-group-item-heading">END</h4>
   </a>
 </div>
 
@@ -75,7 +123,7 @@
   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
     style="width:40%">
     40% Complete (success)
-</div>
+  </div>
 </div>
 
 <br>
@@ -124,7 +172,7 @@
 <br>
 <br>
 
-<h2>List Group With Badges</h2>
+<h2 id="listgroup">List Group With Badges</h2>
 <ul class="list-group">
   <li class="list-group-item">New <span class="badge">12</span></li>
   <li class="list-group-item">Deleted <span class="badge">5</span></li>
@@ -157,7 +205,7 @@
 <br>
 <br>
 
-<h2>Panels with Contextual Classes</h2>
+<h2 id="panels">Panels with Contextual Classes</h2>
 <div class="panel-group">
   <div class="panel panel-default">
     <div class="panel-heading">Panel with panel-default class</div>
@@ -195,7 +243,7 @@
 <br>
 <br>
 
-<h2>Dropdowns</h2>
+<h2 id="dropdowns">Dropdowns</h2>
 <p>The .divider class is used to separate links inside the dropdown menu with a thin horizontal line: also with disabled</p>
 <div class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
@@ -231,7 +279,7 @@
 <br>
 <br>
 
-<h2>Simple Collapsible</h2>
+<h2 id="collapsible">Simple Collapsible</h2>
 <p>Click on the button to toggle between showing and hiding content.</p>
 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
 <div id="demo" class="collapse in">
@@ -307,7 +355,7 @@
 <br>
 <br>
 
-<h3>Tabs With Dropdown Menu</h3>
+<h3 id="manus">Tabs With Dropdown Menu</h3>
 <ul class="nav nav-tabs">
   <li class="active"><a href="#">Home</a></li>
   <li class="dropdown">
@@ -444,41 +492,54 @@
 <br>
 <br>
 
+<h2 id="forms">Vertical (basic) form</h2>
+<form action="/action_page.php">
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" name="remember"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
 <br>
 <br>
 <br>
 <br>
 
-
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
+<h2>Horizontal form</h2>
+<form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
 
 
 <br>
@@ -486,20 +547,358 @@
 <br>
 <br>
 
+<h2>Form control: textarea</h2>
+<p>The form below contains a textarea for comments:</p>
+<form>
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+  </div>
+</form>
 
 <br>
 <br>
 <br>
 <br>
 
+<h2>Form control: checkbox</h2>
+<p>The form below contains three checkboxes. The last option is disabled:</p>
+<form>
+  <div class="checkbox">
+    <label><input type="checkbox" value="">Option 1</label>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" value="">Option 2</label>
+  </div>
+  <div class="checkbox disabled">
+    <label><input type="checkbox" value="" disabled>Option 3</label>
+  </div>
+</form>
+
+<h2>Form control: inline radio buttons</h2>
+<p>The form below contains three inline radio buttons:</p>
+<form>
+  <label class="radio-inline">
+      <input type="radio" name="optradio">Option 1
+    </label>
+  <label class="radio-inline">
+      <input type="radio" name="optradio">Option 2
+    </label>
+  <label class="radio-inline">
+      <input type="radio" name="optradio">Option 3
+    </label>
+</form>
+
+<h2>Form control: select</h2>
+<p>The form below contains two dropdown menus (select lists):</p>
+<form>
+  <div class="form-group">
+    <label for="sel1">Select list (select one):</label>
+    <select class="form-control" id="sel1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    <br>
+    <label for="sel2">Mutiple select list (hold shift to select more than one):</label>
+    <select multiple class="form-control" id="sel2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+  </div>
+</form>
 
 <br>
 <br>
 <br>
 <br>
 
+<h2>Horizontal form with static control</h2>
+<form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">someone@example.com</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+
 
 <br>
+<br>
+<br>
+<br>
+
+<h3>Input Groups</h3>
+<p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front or behind it as a
+  "help text".</p>
+<p>The .input-group-addon class attaches an icon or help text next to the input field.</p>
+
+<form>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon">Text</span>
+    <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+  </div>
+</form>
+<br>
+
+<p>It can also be used on the right side of the input:</p>
+<form>
+  <div class="input-group">
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  </div>
+  <div class="input-group">
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+  </div>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 id="columnsizing">Column Sizing</h2>
+<p>The form below shows input elements with different widths using different .col-xs-* classes:</p>
+<form>
+  <div class="form-group row">
+    <div class="col-xs-2">
+      <label for="ex1">col-xs-2</label>
+      <input class="form-control" id="ex1" type="text">
+    </div>
+    <div class="col-xs-3">
+      <label for="ex2">col-xs-3</label>
+      <input class="form-control" id="ex2" type="text">
+    </div>
+    <div class="col-xs-4">
+      <label for="ex3">col-xs-4</label>
+      <input class="form-control" id="ex3" type="text">
+    </div>
+  </div>
+</form>
+
+<h2>Help text</h2>
+<p>Use the .help-block class to add a block level help text in forms:</p>
+<form>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    <span class="help-block">This is some help text that breaks onto a new line and may extend more than one line.</span>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 id="mediaobject">Media Object</h2>
+<p>The media object can also be top, middle or bottom-aligned with the "media-top", "media-middle" or "media-bottom" class:</p><br>
+<div class="media">
+  <div class="media-left media-top">
+    <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:80px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Media Top</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</div>
+
+<h2>Nested Media Objects</h2>
+<p>Media objects can also be nested (a media object inside a media object):</p><br>
+<div class="media">
+  <div class="media-left">
+    <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:45px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <!-- Nested media object -->
+    <div class="media">
+      <div class="media-left">
+        <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:45px">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">John Doe <small><i>Posted on February 20, 2016</i></small></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua.
+        </p>
+
+        <!-- Nested media object -->
+        <div class="media">
+          <div class="media-left">
+            <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:45px">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">John Doe <small><i>Posted on February 21, 2016</i></small></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Nested media object -->
+      <div class="media">
+        <div class="media-left">
+          <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Jane Doe <small><i>Posted on February 20, 2016</i></small></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Nested media object -->
+  <div class="media">
+    <div class="media-left">
+      <img src="{{fullImagePath}}/kidplayingsoccer.jpeg" class="media-object" style="width:45px">
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 id="carousel">Carousel Example</h2>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+    <div class="item active">
+      <img src="{{fullImagePath}}/la.jpg" alt="Los Angeles" style="width:100%;">
+      <div class="carousel-caption">
+        <h3>Los Angeles</h3>
+        <p>LA is always so much fun!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{fullImagePath}}/chicago.jpg" alt="Chicago" style="width:100%;">
+      <div class="carousel-caption">
+        <h3>Chicago</h3>
+        <p>Thank you, Chicago!</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="{{fullImagePath}}/ny.jpg" alt="New York" style="width:100%;">
+      <div class="carousel-caption">
+        <h3>New York</h3>
+        <p>We love the Big Apple!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 id="smallModal">Small Modal</h2>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Small Modal</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>This is a small modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<h3 id="tooltip">Tooltip Example</h3>
+<p>The data-placement attribute specifies the tooltip position.</p>
+<ul class="list-inline">
+  <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+  <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+  <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+  <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+
+<br id="last">
 <br>
 <br>
 <br>
